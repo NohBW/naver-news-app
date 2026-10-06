@@ -141,7 +141,8 @@ def fetch_news_detail(url):
 # [수정] unsafe_allowed_html -> unsafe_allow_html 오타 교정
 dt.markdown('<div class="custom-title-bar">📰 네이버 뉴스 분야별 헤드라인</div>', unsafe_allow_html=True)
 
-now = datetime.datetime.now()
+# [수정]실시간 한국 시간(KST) 라벨 출력 
+now = datetime.datetime.now(ZoneInfo("Asia/Seoul"))
 weeks = ['월', '화', '수', '목', '금', '토', '일']
 week_str = weeks[now.weekday()]
 time_str = now.strftime(f"%Y년 %m월 %d일({week_str}요일) %H:%M:%S")
