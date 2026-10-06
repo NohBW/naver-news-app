@@ -1,5 +1,4 @@
 
-# streamlit run naver_news_02.py
 
 import streamlit as dt
 import pandas as pd
